@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-changing-button</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center ;
+            background-color: beige;
+        }
+        .center{
+            width: 60%;
+            height: 40%;
+            background-color: aquamarine;
+        }
+        .center button{
+            background-color: navy;
+            color: white;
+            width: 60vw;
+            padding: 10px;
+            border: none;
+        }
+        #btn:hover{
+            cursor: pointer;
+        }
+        .center p{
+            background-color: navy;
+            color: wheat;
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <button id="btn" onclick="fun()">Change</button>
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquid eveniet tempore sed explicabo? Qui autem at libero dolorem explicabo ullam numquam, aut, quasi dicta provident reiciendis molestiae quas hic architecto. Rerum soluta reprehenderit a quod quaerat sunt et, tempora maxime, fuga autem optio corporis deserunt harum commodi? Dolorum molestias accusantium quasi et dolores quaerat aperiam modi minima nostrum, numquam eveniet veniam soluta laboriosam harum asperiores sequi beatae magnam. Ea at eveniet quasi laboriosam accusantium beatae tempore praesentium atque, a et, aspernatur voluptas ex amet. Pariatur dolores voluptates, voluptatibus esse explicabo enim voluptas fuga veniam, cupiditate, quos delectus qui expedita.</p>
+        </div>
+    </div>
+    <script>
+        var choice = 2
+        var text1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquid eveniet tempore sed explicabo? Qui autem at libero dolorem explicabo ullam numquam, aut, quasi dicta provident reiciendis molestiae quas hic architecto. Rerum soluta reprehenderit a quod quaerat sunt et, tempora maxime, fuga autem optio corporis deserunt harum commodi? Dolorum molestias accusantium quasi et dolores quaerat aperiam modi minima nostrum, numquam eveniet veniam soluta laboriosam harum asperiores sequi beatae magnam. Ea at eveniet quasi laboriosam accusantium beatae tempore praesentium atque, a et, aspernatur voluptas ex amet. Pariatur dolores voluptates, voluptatibus esse explicabo enim voluptas fuga veniam, cupiditate, quos delectus qui expedita."
+        var text2 = "Recusandae, praesentium? Dolorum omnis ullam voluptatibus animi dolor maiores vel, ratione nihil provident saepe vitae ea alias distinctio sint inventore. Impedit ad molestiae quisquam vero odit illum? Quasi, laboriosam eius qui quod ducimus debitis placeat eligendi tempore cumque distinctio voluptatum velit ea soluta corrupti ad perferendis, quidem neque nihil voluptate accusantium fugiat dolor blanditiis? A dicta animi magni voluptatibus, ea earum optio necessitatibus corporis delectus excepturi sunt minima, numquam officiis placeat dolores eum facere nisi quisquam recusandae suscipit odio. Possimus placeat dolorum nostrum recusandae tempora? Doloremque laboriosam accusamus autem nam ratione. Ullam. "   
+        var p = document.getElementById("para")
+        var btn = document.getElementById("btn")
+        function fun(){
+            if (choice==1){
+                p.innerHTML = text1
+                choice = 2
+                btn.innerHTML ="Change"
+            }
+            else{
+                p.innerHTML = text2
+                choice = 1
+                btn.innerHTML ="Reset"
+            }
+        }
+    </script>
+</body>
+</html>

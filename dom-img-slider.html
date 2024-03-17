@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        *{
+            margin: 0;
+        }
+
+        .main{
+            width:100vw;
+            height: 100vh;
+        }
+        .center{
+            left: 15%;
+            top: 20%;
+            width: 70%;
+            height: 70%;
+            position: relative;
+        }
+        .center img{
+            width: 100%;
+            height: 100%;
+        }
+        .btn{
+            background: none;
+            color: white;
+            border: none;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+        }
+
+        #btn1{
+            left: 10px;
+        }
+        #btn2{
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="center">
+            <img src="../images/img1.jpg" id="img" >
+            <button class="btn" id="btn1" onclick="previous()"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+            <button class="btn" id="btn2" onclick="next()">
+                <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                </span>
+            </button>
+        </div>
+        <div>../images/img1.jp</div>
+        <img src="../images/img2.jpg" alt="">
+    </div>
+    <script>
+        var images = ["../images/img1.jpg", "../images/img2.jpg","../images/img3.jpg","../images/img4.jpg","../images/img5.jpg", ];
+        var index = 0;
+        var img = document.getElementById("img")
+        function next(){
+            if(index === images.length - 1)
+            {
+                index = 0;
+            }
+            else
+            {
+            index++
+            img.src = images[index]
+        }
+        }
+        function previous(){
+            if (index==0){
+                index = images.length-1
+            }
+            else
+            {
+                index--
+                index = images.length+1
+            }
+        }
+        
+        function fun(choice){
+            if (choice==1){
+                clearInterval(time)}
+                else{
+                    var time  = setInterval(2000)
+                }
+            }
+    </script>
+</body>
+
+</html>
