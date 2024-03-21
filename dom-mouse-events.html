@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-mouse-event</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: grid;
+            place-items: center;
+            background-color: aqua;
+            color: navy;
+            height: 50vh;
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"
+    onmouseover="fun1()"
+    onmouseenter="fun2()"
+    onmousedown="fun3()"
+    onmouseup="fun4()"
+    onclick="fun5()"
+    ondblclick="fun6()"
+    onmousemove="fun7()"
+    onmousewheel="fun8()"
+    onmouseout="fun9()"
+    onmouseleave="fun10()"
+    >
+        No Event
+    </div>
+    <script>
+        var main = document.querySelector(".main")
+        function fun1(){
+            main.style.backgroundColor = "red"
+            main.style.color = "white"
+            main.innerHTML = "on mouse over event"
+
+        }
+    </script>
+</body>
+</html>
