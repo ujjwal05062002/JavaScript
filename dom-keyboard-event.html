@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .center{
+            width: 70%;
+            margin: auto;
+        }
+        .center h4{
+            color: white;
+            background-color: green;
+            text-align: center; 
+            padding: 5px 0;
+            margin-bottom: 3px ;
+        }
+        .center input{
+            width: 100%;
+            padding: 10px 0px;
+            margin: 3px;
+            border: none;
+            border-bottom: 5px solid green;
+            border-radius: 10px;
+        }
+        .center button{
+            padding: 10px;
+            background-color: green;
+            color: white;
+            width: 100%;
+        }
+        #input-field{
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <h4>Keyboard Event Example</h4>
+            <h5 id="hname">Name : </h5>
+            <input type="text" name= "fname" id="fname" placeholder="Enter Full Name" onkeydown="fun1('fname')" onkeypress="fun2('fname')" onkeyup="fun3('fname')">
+            <h5 id="hmail">Email: </h5>
+            <input type="email" name= "email" id="email" placeholder="Enter your mail" onkeydown="fun1('email')" onkeypress="fun2('email')" onkeyup="fun3('email')">
+            <h5 id="hphone">Phone: </h5>
+            <input type="text" name= "phone" id="phone" placeholder="Enter Phone" onkeydown="fun1('phone')" onkeypress="fun2('phone')" onkeyup="fun3('phone')">
+            <h5 id="hdesignation">Designation: </h5>
+            <input type="text" name= "designation" id="designation" placeholder="Enter Designation" onkeydown="fun1('designation')" onkeypress="fun2('designation')" onkeyup="fun3('designation')">
+            <h5 id = "hsalary">Salary: </h5>
+            <input type="number" name= "salary" id="salary" placeholder="Enter Salary" onkeydown="fun1('salary')" onkeypress="fun2('salary')" onkeyup="fun3('salary')">
+            <h5 id="hcity">City : </h5>
+            <input type="text" name= "city" id="city" placeholder="Enter City" onkeydown="fun1('city')" onkeypress="fun2('city')" onkeyup="fun3('city')">
+            <h5 id="hstate">State : </h5>
+            <input type="text" name= "state" id="state" placeholder="Enter State" onkeydown="fun1('state')" onkeypress="fun2('state')" onkeyup="fun3('state')">
+            <button>Submit</button>
+        </div>
+    </div>
+    <script>
+        function fun1(id){
+            var input = document.getElementById(id)
+            input.style.backgroundColor="lightgray"
+            input.style.color="green"
+            console.log("On Key Down Event is called")
+        }
+        function fun2(id){
+            var input = document.getElementById(id)
+            input.style.backgroundColor="lightpink"
+            input.style.color="green"
+            console.log("On Key Press Event is called")
+        }
+        function fun3(id){
+            var input = document.getElementById(id)
+            var heading = document.getElementById(`h${id}`)
+            input.style.backgroundColor="black"
+            input.style.color="white"
+            console.log("On Key Up Event is called")
+        }
+    </script>
+</body>
+</html>
