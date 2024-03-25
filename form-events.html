@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            height: 100vh;
+            width: 100vw;
+        }
+        .center{
+            width: 80%;
+            margin: auto;
+        }
+        .center h4, h5{
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            margin: 3px 0px;
+        }
+        .center input{
+            border: none;
+            width: 100%;
+            /* background-color: navy; */
+            border-bottom: 6px solid green;
+            border-radius: 10px;
+        }
+        .center button{
+            background-color: green;
+            color: white;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        #input-field{
+            text-transform:  capitalize ;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <h4>Keyboard Event Example</h4>
+            <h5 id="hfname">Name : </h5>
+            <h5 id="hemail">Email : </h5>
+            <h5 id="hdesignation">Designation : </h5>
+            <h5 id="hsalary">Salary : </h5>
+            <h5 id="hcity">City : </h5>
+            <h5 id="hstate">State : </h5>
+            <h5 id="hpincode">Pincode : </h5>
+            <input type="text" name="fname" id="fname" placeholder="Name" onfocus="fun1('fname')"onblur="fun2('fname')">
+            <input type="email" name="email" id="email" placeholder="E-mail" onfocus="fun1('email')"onblur="fun2('email')">
+            <input type="text" name="designation" id="designation" placeholder="Designation" onfocus="fun1('designation')"onblur="fun2('designation')">
+            <input type="number" name="salary" id="salary" placeholder="Salary" onfocus="fun1('salary')"onblur="fun2('salary')">
+            <input type="text" name="city" id="city" placeholder="City" onfocus="fun1('city')"onblur="fun2('city')">
+            <input type="text" name="state" id="state" placeholder="State" onfocus="fun1('state')"onblur="fun2('state')">
+            <input type="text" name="pincode" id="pincode" placeholder="Pincode" onfocus="fun1('pincode')"onblur="fun2('pincode')">
+            <button>Submit</button>
+        </div>
+    </div>
+    <script>
+        function fun1(id){
+            var input = document.getElementById(id)
+            var heading = document.getElementById(`h${id}`)
+            input.style.backgroundColor = "lightgray"
+            input.style.color = "green"
+            console.log("on focus is called");
+            heading.innerText = `${id.charAt(0).toUpperCase()}${id.slice(1)} : ${input.value}`
+
+        }
+        function fun2(id){
+            var input = document.getElementById(id)
+            input.style.backgroundColor = "lightpink"
+            input.style.color = "black"
+            console.log("on blur is called")
+        }
+    </script>
+</body>
+</html>
