@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .center{
+            width: 80%;
+            margin: auto;
+        }
+
+        .first, .second{
+            width: 100%;
+        }
+        .first{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .first button{
+            width: 33%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor : pointer;
+        }
+        .second p{
+            padding: 10px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="first">
+                <button onclick="createItem()">Create</button>
+                <button onclick="deleteItem()">Delete First</button>
+                <button onclick="clearAll()">Clear All</button>
+            </div>
+            <div class="second"> 
+            </div>   
+        </div>
+    </div>
+    <script>
+        var second = document.querySelector('.second')
+        var count = 1
+        function createItem(){
+            var p = document.createElement("p")
+            p.innerHTML  = `This is Paragraph p${count}`
+            p.id = `p${count}`
+            count++
+            second.appendChild(p)
+        } 
+        function deleteItem(){
+            var firstItem = document.querySelector('.second p')
+            firstItem.remove()
+        }
+        function clearAll(){
+            second.innerHTML = ''
+            count = 1
+        }
+    </script>
+</body>
+</html>
