@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            width: 35vw;
+        }
+        .menu h3{
+            background-color: navy;
+            color: white;
+            padding: 10px;
+        }
+        .material-symbols-outlined{
+            float: right;
+            cursor: pointer;
+        }
+        .items{
+            width: 100%;
+        }
+        .items ul{
+            list-style-type: none;
+        }
+        .items li{
+            background-color: navy;
+            padding: 5px;
+            margin: 1px;
+        }
+        .items a{
+            text-decoration: none;
+            color: white;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+            <h3>Menu<span class="material-symbols-outlined" onclick="fun1()">menu</span></h3>
+            <div class="items hide">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        
+    </div>
+    <script>
+        var div = document.querySelector(".items")
+        function fun1(){
+            div.classList.toggle("hide")
+        }
+    </script>
+</body>
+</html>
