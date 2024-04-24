@@ -1,0 +1,48 @@
+// Swap two variable
+
+// 1. Using 3rd variable
+
+var a = 10
+var b  = 20
+console.log(`
+Before Swapping : 
+a : ${a}
+b : ${b}
+`);
+
+var c = a + b // c = 30
+
+a = c-b  // a = 30-20 = 10
+
+b = c-a // b = 30-10 = 20
+
+console.log(`
+After Swapping : 
+a : ${a}
+b : ${b}
+`);
+
+
+// 2. Without using the third variable
+
+var a = 10
+
+var b = 20
+
+console.log(`
+Before Swapping : 
+a : ${a}
+b : ${b}
+`);
+
+a = a+b // a = 30 , b = 20
+
+b = a-b // a = 30 , b = 30-20 = 10
+
+a = a- b  // a = 30 , b = 10 , 
+
+console.log(`
+After Swapping : 
+a : ${a}
+b : ${b}
+`);
